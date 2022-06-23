@@ -1,0 +1,60 @@
+import React, { useState } from 'react';
+import './Login.css';
+import { Link } from 'react-router-dom';
+import axios from 'axios';
+
+function Login(props) {
+    const [errors, setErrors] = useState([]);
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const submitHandler = (e) => {
+        e.preventDefault();
+        axios.post('http://localhost:8000/api/users/login', {
+                email,
+                password
+            })
+                .then(res=>{
+                    console.log(res.data);
+                })
+                .catch((err)=>{
+                    const errorResponse = err.response.data.errors;
+                    const errorArr = [];
+                    for (const key of Object.keys(errorResponse)) {
+                        errorArr.push(errorResponse[key].message)
+                    }
+                    setErrors(errorArr);
+                })
+    }
+
+    return(
+        <div className='loginContainer'>
+            <h1 className='loginH1'>Login</h1>
+            <form className='loginForm' onSubmit={submitHandler}>
+                {errors.map((err, index) => <p key={index}>{err}</p>)}
+                <label>
+                    Email:
+                    <input
+                    type="text"
+                    className='textInput'
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    />
+                </label>
+                <label>
+                    Password:
+                    <input
+                    type="password"
+                    className='textInput'
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    />
+                </label>
+                <input type="submit" value="Login"  className='submitBtn' />
+            </form>
+            <Link to='/register'>Don't have an account? Sign up here!</Link>
+        </div>
+    );
+};
+
+export default Login;
