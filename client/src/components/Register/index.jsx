@@ -7,7 +7,6 @@ function Register(props) {
     const [errors, setErrors] = useState([]);
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
-    const [profilePic, setProfilePic] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
 
@@ -16,7 +15,6 @@ function Register(props) {
         axios.post('http://localhost:8000/api/users/register', {
                 username,
                 email,
-                profilePic,
                 password,
                 confirmPassword
             })
@@ -54,15 +52,6 @@ function Register(props) {
                     className='textInput'
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    />
-                </label>
-                <label>
-                    Profile Picture:
-                    <input
-                    type="text"
-                    className='textInput'
-                    value={profilePic}
-                    onChange={(e) => setProfilePic(e.target.value)}
                     />
                 </label>
                 <label>
