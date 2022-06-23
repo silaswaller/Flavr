@@ -9,11 +9,6 @@ const UserSchema = new mongoose.Schema({
         required: [true, "Username is required"]
     },
 
-    profilePic: {
-        type: String, 
-        required: [true, "Profile Image is required"]
-    },
-
     email: {
         type: String,
         required: [true, "Email address is required"]
