@@ -18,7 +18,12 @@ const UserSchema = new mongoose.Schema({
         type: String,
         required: [true, "Password is required"],
         minLength: [8, "Passwords MUST be at least 8 characters"]
-    }
+    },
+
+    favoriteRecipes: {
+        type: Array,
+        default: []
+    },
 
 },{timestamps: true})
 

@@ -28,10 +28,12 @@ const FlavrSchema = new mongoose.Schema({
         type: String,
     },
 
-    ingredients: {
-        type: [],
-    },
+    ingredients: [String],
 
+    recipeLiked: {
+        type: Array,
+        default: []
+    },
 
     createdBy: {
         type: mongoose.Schema.Types.ObjectId,
