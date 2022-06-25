@@ -9,11 +9,6 @@ const UserSchema = new mongoose.Schema({
         required: [true, "Username is required"]
     },
 
-    profilePic: {
-        type: String, 
-        required: [true, "Profile Image is required"]
-    },
-
     email: {
         type: String,
         required: [true, "Email address is required"]
@@ -23,7 +18,12 @@ const UserSchema = new mongoose.Schema({
         type: String,
         required: [true, "Password is required"],
         minLength: [8, "Passwords MUST be at least 8 characters"]
-    }
+    },
+
+    favoriteRecipes: {
+        type: Array,
+        default: []
+    },
 
 },{timestamps: true})
 
