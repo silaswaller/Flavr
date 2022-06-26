@@ -15,7 +15,8 @@ function App() {
           <Route path='/login' element={ <Login /> } />
           <Route path='/register' element={ <Register /> } />
           <Route path='/home' element={ <Home /> } />
-          <Route path='/new' element={ <RecipeForm /> } />
+          <Route path='/new' element={ <RecipeForm view={'new'} /> } />
+          <Route path='/edit/:id' element={ <RecipeForm view={'edit'} /> } />
         </Routes>
       </BrowserRouter>
     </div>
