@@ -84,19 +84,19 @@
     color: white;
     box-shadow: 3px 3px 5px rgb(122, 122, 122);
     cursor: pointer;
-    transition-duration: 400ms;
+    transition-duration: 200ms;
 }
 
 .recipeFormSubmit:hover {
     margin: 1vh 1vw;
     align-self: flex-end;
-    background-color: white;
+    background-color: rgb(220, 77, 0, 0.85);
     border-radius: .25em;
     border: none;
-    padding: 1.3vh 1.2vw;
+    padding: 1vh 1vw;
     text-decoration: none;
-    color: rgb(220, 77, 0);
+    color: white;
     box-shadow: 3px 3px 5px rgb(122, 122, 122);
     cursor: pointer;
-    transition-duration: 1000ms;
+    transition-duration: 300ms;
 }

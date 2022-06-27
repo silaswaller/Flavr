@@ -22,13 +22,14 @@
     margin: 1vh 2vw;
     font-size: 1.5em;
     list-style: none;
-    transition-duration: 400ms;
+    transition-duration: 200ms;
 }
 .headerLinkList li:hover {
-    margin: 1.4vh 2.8vw;
-    font-size: 1.7em;
+    margin: 0vh 0vw;
+    padding: 0vh 2vw;
+    font-size: 1.6em;
     list-style: none;
-    transition-duration: 1000ms;
+    transition-duration: 300ms;
 }
 
 
