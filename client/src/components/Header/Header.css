@@ -22,7 +22,15 @@
     margin: 1vh 2vw;
     font-size: 1.5em;
     list-style: none;
+    transition-duration: 400ms;
 }
+.headerLinkList li:hover {
+    margin: 1.4vh 2.8vw;
+    font-size: 1.7em;
+    list-style: none;
+    transition-duration: 1000ms;
+}
+
 
 .headerLinkList li a {
     text-decoration: none;
