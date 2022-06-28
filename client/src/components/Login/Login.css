@@ -1,0 +1,57 @@
+.loginContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loginH1 {
+    color:rgb(220, 77, 0);
+    margin: 10vh 0 0 0;
+    font-size: 4em;
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 4vh 0;
+}
+
+.loginForm label {
+    margin: 1vh 0;
+}
+
+.textInput {
+    border-radius: .25em;
+    margin: 0 .5vw;
+    border: solid 2px rgb(185, 185, 185);
+    padding: .25vh .25vw;
+}
+
+.submitBtn {
+    margin: 1vh 0;
+    align-self: center;
+    background-color: rgb(220, 77, 0);
+    border-radius: .25em;
+    border: none;
+    padding: 1vh 1vw;
+    text-decoration: none;
+    color: white;
+    box-shadow: 3px 3px 5px rgb(122, 122, 122);
+    cursor: pointer;
+    transition-duration: 400ms;
+}
+
+.submitBtn:hover {
+    margin: 1vh 0;
+    align-self: center;
+    background-color: rgb(220, 77, 0, 0.85);
+    border-radius: .25em;
+    border: none;
+    padding: 1vh 1vw;
+    text-decoration: none;
+    color: white;
+    box-shadow: 3px 3px 5px rgb(122, 122, 122);
+    cursor: pointer;
+    transition-duration: 300ms;
+}

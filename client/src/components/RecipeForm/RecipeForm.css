@@ -1,0 +1,109 @@
+.recipeFormContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.recipeFormH1 {
+    color:rgb(220, 77, 0);
+    margin: 4.5vh 0 0 0;
+    font-size: 3em;
+}
+
+.recipeForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.formColContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.formCol {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    margin: 0 2vw;
+}
+
+.formCol label {
+    margin: 1vh 0;
+}
+
+.formCol label input, .formCol label textarea, .ingredientInput {
+    border-radius: .25em;
+    margin: 0 .5vw;
+    border: solid 2px rgb(185, 185, 185);
+    padding: .25vh .25vw;
+    width: 20vw;
+}
+
+.ingredientInput {
+    margin: 1vh 0;
+}
+
+.ingredientLabel {
+    align-self: flex-start;
+}
+
+.formCol label textarea {
+    resize: none;
+    height: 15vh;
+}
+
+.textAreaLabel {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.addIngredientContainer {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-top: 1vh;
+    cursor: pointer;
+}
+
+.addIngredientContainer img {
+    width: 1.5vw;
+    margin-right: 1vw;
+}
+
+.recipeFormSubmit {
+    margin: 1vh 1vw;
+    align-self: flex-end;
+    background-color: rgb(220, 77, 0);
+    border-radius: .25em;
+    border: none;
+    padding: 1vh 1vw;
+    text-decoration: none;
+    color: white;
+    box-shadow: 3px 3px 5px rgb(122, 122, 122);
+    cursor: pointer;
+    transition-duration: 200ms;
+}
+
+.recipeFormSubmit:hover {
+    margin: 1vh 1vw;
+    align-self: flex-end;
+    background-color: rgb(220, 77, 0, 0.85);
+    border-radius: .25em;
+    border: none;
+    padding: 1vh 1vw;
+    text-decoration: none;
+    color: white;
+    box-shadow: 3px 3px 5px rgb(122, 122, 122);
+    cursor: pointer;
+    transition-duration: 300ms;
+}
+
+#addIngredientButton {
+    padding: 3px;
+    background-color: white;
+    border: 2px solid rgb(185, 185, 185);
+    border-radius: 2px;
+}
