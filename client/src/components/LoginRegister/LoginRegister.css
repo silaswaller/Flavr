@@ -2,8 +2,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.glow{
     animation-name: reflect;
-    animation-duration: 10000ms;
+    animation-duration: 3000ms;
 }
 
 .logo {
@@ -21,9 +24,13 @@
 
 .btn {
     background-color: rgb(220, 77, 0);
+    justify-self: center;
     border-radius: .25em;
     padding: 1vh 1vw;
-    margin: 5vh 0;
+    margin-top: 5vh;
+    margin-left: -1vw;
+    margin-bottom:0vw;
+    margin-right: 2vw; 
     text-decoration: none;
     color: white;
     box-shadow: 3px 3px 5px rgb(122, 122, 122);
@@ -32,9 +39,13 @@
 
 .btn:hover {
     background-color: rgba(220, 77, 0, 0.85) ;
+    justify-self: center;
     border-radius: .25em;
     padding: 1vh 1vw;
-    margin: 5vh 0;
+    margin-top: 5vh;
+    margin-left: -1vw;
+    margin-bottom:0vw;
+    margin-right: 2vw; 
     text-decoration: none;
     color: white;
     box-shadow: 3px 3px 5px rgb(122, 122, 122);
@@ -46,7 +57,7 @@
         color:black;
     }
 
-    66%{
+    33%{
         color: rgb(220, 77, 0);
     }
     100%{color:black;
