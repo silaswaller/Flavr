@@ -28,7 +28,13 @@ const FlavrSchema = new mongoose.Schema({
         type: String,
     },
 
-    ingredients: [String],
+    ingredients: [
+        {
+            name: {
+                type: String
+            }
+        }
+    ],
 
     recipeLiked: {
         type: Array,

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Login.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 function Login(props) {
@@ -8,14 +8,21 @@ function Login(props) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
+    const navigate = useNavigate();
+
     const submitHandler = (e) => {
         e.preventDefault();
         axios.post('http://localhost:8000/api/users/login', {
-                email,
-                password
+                email: email,
+                password: password
+            },
+            {
+                withCredentials: true,
             })
                 .then(res=>{
+                    console.log(res);
                     console.log(res.data);
+                    navigate('/home');
                 })
                 .catch((err)=>{
                     const errorResponse = err.response.data.errors;
