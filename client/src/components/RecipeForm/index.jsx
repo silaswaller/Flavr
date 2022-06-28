@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './RecipeForm.css';
 import Header from '../Header';
-import addIcon from './plus.png';
+// import addIcon from './plus.png';
 import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
 
@@ -17,6 +17,9 @@ function RecipeForm(props) {
     const [description, setDescription] = useState('');
     const [preparation, setPreparation] = useState('');
     const [ingredients, setIngredients] = useState([]);
+    const [newIngredient, setNewIngredient] = useState({
+        name: ""
+    });
     const [createdBy, setCreatedBy] = useState(''); //Not quite sure how to format this based on model
 
     useEffect(()=>{
@@ -68,8 +71,9 @@ function RecipeForm(props) {
                 cookTime,
                 serves,
                 description,
-                preparation
-            })
+                preparation,
+                ingredients
+            }, { withCredentials: true })
                 .then(res=>{
                     console.log(res);
                     console.log(res.data);
@@ -85,6 +89,26 @@ function RecipeForm(props) {
                 })
         }
     }
+
+
+    const updateIngredient = (e)=>{
+        let ingredientCopy = {...newIngredient};
+        console.log(e.target.name, e.target.value);
+        ingredientCopy[e.target.name]  = e.target.value;
+        setNewIngredient(ingredientCopy)
+        
+
+    }
+
+    const addIngredients = (e)=>{
+        e.preventDefault();
+        setIngredients([...ingredients, newIngredient]);
+        setNewIngredient({
+            name:""
+        });
+    }
+
+
 
     return(
         <div className='recipeFormContainer'>
@@ -146,25 +170,34 @@ function RecipeForm(props) {
                                 {preparation}
                             </textarea>
                         </label>
-                        <input
-                        type="submit" value="Add Recipe" className='recipeFormSubmit' />
+                        <input type="submit" value="Add Recipe" className='recipeFormSubmit' />
                     </div>
+
+
+
+
+
+
+
                     <div className='formCol'>
                         <label className='ingredientLabel'>
                             Ingredients:
                         </label>
-                        {/*Not really sure how to handle these, The idea is to be able to add fields
-                        and then push them all to an array which gets sent to the backend*/}
-                        <input type="text" className='ingredientInput' />
-                        <input type="text" className='ingredientInput' />
-                        <input type="text" className='ingredientInput' />
-                        <input type="text" className='ingredientInput' />
-                        <div className='addIngredientContainer'>
-                            <img src={addIcon} alt="" />
-                            <p>Add Ingredients</p>
+                        <input type="text" name='name' value={newIngredient.name} onChange={updateIngredient} className='ingredientInput' />
+                        <button onClick={addIngredients}>Add an Ingredient</button>
+                        
+                        <div>
+                            {
+                                ingredients.map((ingredient, index) => (
+                                    <p key={index}>{ingredient.name}</p>
+                                ))
+                            }
                         </div>
                     </div>
+
                 </div>
+                
+
             </form>
         </div>
     );
