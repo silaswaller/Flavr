@@ -1,13 +1,11 @@
+
 .loginRegisterContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.glow{
-    animation-name: reflect;
-    animation-duration: 3000ms;
-}
+
 
 .logo {
     color:rgb(220, 77, 0);
@@ -52,6 +50,11 @@
     transition-duration: 300ms;
 }
 
+.glow{
+    animation-name: reflect;
+    animation-delay: 2000ms;
+    animation-duration: 3000ms;
+}
 @keyframes reflect{
     0%{
         color:black;
