@@ -1,7 +1,31 @@
 import React from 'react';
 import './Header.css';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 function Header() {
+
+    const navigate = useNavigate();
+
+    const logout = (e) => {
+        axios
+            .post(
+                "http://localhost:8000/api/users/logout",
+                {}, // As a post request, we MUST send something with our request.
+                // Because we're not adding anything, we can send a simple MT object
+                {
+                    withCredentials: true,
+                },
+            )
+            .then((res) => {
+                console.log(res);
+                console.log(res.data);
+                navigate("/");
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+    };
 
     return(
         <div className='headerContainer'>
@@ -11,6 +35,7 @@ function Header() {
                 <li><a href='#'>Profile</a></li>
                 <li><a href='#'>Favorites</a></li>
                 <li><a href='/new'>Add</a></li>
+                <button className='btnHeader' onClick={logout}>Logout</button>
             </ul>
         </div>
     );

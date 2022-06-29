@@ -4,7 +4,6 @@ import Header from '../Header';
 import './Home.css';
 import axios from 'axios';
 
-
 function Home(props) {
 
     const [user, setUser] = useState({});
@@ -35,6 +34,8 @@ function Home(props) {
             console.log(err);
         })
     }, [])
+
+
 
     return(
         <div className='homeContainer'>

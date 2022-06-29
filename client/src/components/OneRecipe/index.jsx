@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
+import Header from '../Header';
 import './OneRecipe.css';
 
 const OneRecipe = (props) => {
@@ -8,11 +9,12 @@ const OneRecipe = (props) => {
     const {id} = useParams();
 
     const [recipe, setRecipe] = useState("");
+    const [recipeList, setRecipeList] = useState([]);
 
     const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get(`http://localhost:8000/api/Recipe/${id}`)
+        axios.get(`http://localhost:8000/api/Recipes/${id}`)
         .then((res) => {
             console.log(res);
             console.log(res.data);
@@ -25,23 +27,23 @@ const OneRecipe = (props) => {
 
     const deleteRecipe = (idFromBelow) => {
         axios.delete(`http://localhost:8000/api/Recipes/${idFromBelow}`)
-        .then((res) => {
-            console.log(res);
-            console.log(res.data);
-            navigate("/")
-        })
-        .catch((err) => {
-            console.log(err)
-        })
+            .then((res) => {
+                console.log(res);
+                console.log(res.data);
+                setRecipeList(recipeList.filter(recipe => recipe._id !== idFromBelow));
+                navigate('/home');
+            })
+            .catch((err) => console.log(err));
     }
 
     const editRecipe = () => {
-        navigate(`/Recipe/edit/${recipe._id}`)
+        navigate(`/editRecipe/${recipe._id}`)
     }
 
 
     return(
         <div>
+            <Header />
             <div id = "recipeTitleImageDescription">
                 <div>
                     <h1 id="oneRecipeName">{recipe.name}</h1>
