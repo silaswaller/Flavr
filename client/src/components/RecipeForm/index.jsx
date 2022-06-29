@@ -184,7 +184,7 @@ function RecipeForm(props) {
                             Ingredients:
                         </label>
                         <input type="text" name='name' value={newIngredient.name} onChange={updateIngredient} className='ingredientInput' />
-                        <button onClick={addIngredients}>Add an Ingredient</button>
+                        <button onClick={addIngredients} className='recipeFormSubmit'>Add an Ingredient</button>
                         
                         <div>
                             {

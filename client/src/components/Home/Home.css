@@ -1,0 +1,56 @@
+#welcomeUsername {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    color:rgb(220, 77, 0);
+}
+
+#recipeName{
+    margin: 10px;
+}
+
+.homeRecipeImage {
+    width: 300px;
+    height: 200px;
+    border: 2px solid white;
+    justify-content: space-between;
+    align-items: center;
+    display: inline-block;
+}
+
+#homeRecipe {
+    padding: 10px;
+    width: min-content;
+    background-color: rgb(220, 77, 0);
+    color: white;
+}
+
+#container {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.homeRecipeText {
+    text-align: left;
+    justify-content: left;
+    margin-left: 20px;
+}
+
+Link {
+    color: white;
+}
+
+#likeAndFavorite {
+    display: flex;
+    justify-content: space-between;
+}
+
+#like, #favorite {
+    display: flex;
+}
+
+.icon {
+    margin-right: 5px;
+}

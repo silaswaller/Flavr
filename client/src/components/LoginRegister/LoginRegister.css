@@ -5,8 +5,6 @@
     align-items: center;
 }
 
-
-
 .logo {
     color:rgb(220, 77, 0);
     margin: 10vh 0 0 0;
@@ -23,6 +21,9 @@
 .btn {
     background-color: rgb(220, 77, 0);
     justify-self: center;
+    display:flex;
+    justify-content: center;
+    align-items: center;
     border-radius: .25em;
     padding: 1vh 1vw;
     margin-top: 5vh;
@@ -38,6 +39,9 @@
 .btn:hover {
     background-color: rgba(220, 77, 0, 0.85) ;
     justify-self: center;
+    display:flex;
+    justify-content: center;
+    align-items: center;
     border-radius: .25em;
     padding: 1vh 1vw;
     margin-top: 5vh;
@@ -50,11 +54,14 @@
     transition-duration: 300ms;
 }
 
+
 .glow{
     animation-name: reflect;
     animation-delay: 2000ms;
     animation-duration: 3000ms;
+    font-size: 1em;
 }
+
 @keyframes reflect{
     0%{
         color:black;
@@ -65,5 +72,154 @@
     }
     100%{color:black;
 
+    }
+}
+@media screen and (max-width: 1024px){
+
+    .logo{
+        font-size: 7em;
+    }
+    .btn {
+        background-color: rgb(220, 77, 0);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        justify-self: center;
+        border-radius: .25em;
+        padding: 1vh 1vw;
+        margin-top: 5vh;
+        margin-left: -1vw;
+        margin-bottom:0vw;
+        margin-right: 2vw; 
+        text-decoration: none;
+        color: white;
+        box-shadow: 3px 3px 5px rgb(122, 122, 122);
+        transition-duration: 200ms;
+        height: 10vh;
+        width: 25vw;
+        font-size: 20px;
+
+    }
+    .btnContainer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 50vw;
+        
+    }
+}
+
+
+@media screen and (max-width: 480px){
+    *{
+        margin-top: 3vw;
+    }
+    .logo{
+        font-size: 4.5em;
+    }
+    .btn {
+        background-color: rgb(220, 77, 0);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        justify-self: center;
+        border-radius: .25em;
+        padding: 1vh 1vw;
+        margin-top: 5vh;
+        margin-left: -1vw;
+        margin-bottom:0vw;
+        margin-right: 2vw; 
+        text-decoration: none;
+        color: white;
+        box-shadow: 3px 3px 5px rgb(122, 122, 122);
+        transition-duration: 200ms;
+        height: 10vh;
+        width: 25vw;
+        font-size: 20px;
+
+    }
+    .btnContainer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 50vw;
+        
+    }
+
+}
+
+@media screen and (max-width: 360px){
+    .logo{
+        font-size: 3em;
+    }
+
+
+    
+    .btn {
+        background-color: rgb(220, 77, 0);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        justify-self: center;
+        border-radius: .25em;
+        padding: 1vh 1vw;
+        margin-top: 5vh;
+        margin-left: -1vw;
+        margin-bottom:0vw;
+        margin-right: 2vw; 
+        text-decoration: none;
+        color: white;
+        box-shadow: 3px 3px 5px rgb(122, 122, 122);
+        transition-duration: 200ms;
+        height: 10vh;
+        width: 25vw;
+    }
+    .btnContainer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 50vw;
+    }
+}
+
+
+@media screen and (max-width: 280px){
+    .logo{
+        font-size: 3em;
+    }
+
+    .socialContainer{
+        margin-left: 20vw;
+    }
+
+    
+    .btn {
+        background-color: rgb(220, 77, 0);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        justify-self: center;
+        border-radius: .25em;
+        padding: 1vh 1vw;
+        margin-top: 5vh;
+        margin-left: -1vw;
+        margin-bottom:0vw;
+        margin-right: 2vw; 
+        text-decoration: none;
+        color: white;
+        box-shadow: 3px 3px 5px rgb(122, 122, 122);
+        transition-duration: 200ms;
+        height: 10vh;
+        width: 25vw;
+    }
+    .btnContainer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 50vw;
     }
 }
