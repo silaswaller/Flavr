@@ -7,28 +7,38 @@
 }
 
 #recipeName{
-    margin: 10px;
+    margin: 0px;
 }
 
 .homeRecipeImage {
-    width: 12em;
-    height: 9em;
+    width: 25vw;
+    height: 50vh;
     border: 2px solid white;
     justify-content: space-between;
     align-items: center;
+    object-fit: cover;
 }
 
 #homeRecipe {
-    padding: 10px;
+    padding: 2vw;
     width: min-content;
     background-color: rgb(220, 77, 0);
     color: white;
+    min-height: 80vh;
+    max-height: 80vh;
+    margin-top: 5vh;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    border-radius: 1vw;
 }
 
 .container {
     height: 100%;
-    width: 90vw;
-    margin-left: 5vw;
+    width: 100vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -63,10 +73,14 @@ Link {
 .recipeLinkName{
     color: white;
     text-decoration: none;
+    display: block;
+    max-height: 10vh;
+
 }
 
 .recipeBtn{
     background-color: rgb(220, 77, 0);
     border: none;
     color: white;
+    margin: 1vw;
 }

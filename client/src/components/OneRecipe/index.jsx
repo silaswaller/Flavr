@@ -51,7 +51,7 @@ const OneRecipe = (props) => {
                     <p id="oneRecipeDescription">{recipe.description}</p>
                 </div>
                 <div>
-                    <img id="oneRecipeImage" src={recipe.image}/>
+                    <img id="oneRecipeImage" src={recipe.image} className="oneImg"/>
                 </div>
             </div>
             <br/>
