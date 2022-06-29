@@ -38,7 +38,13 @@ function Home(props) {
         })
     }, [])
 
+    const like = () => {
 
+    }
+
+    const favorite = () => {
+        
+    }
 
     
 
@@ -60,7 +66,6 @@ function Home(props) {
                                 <img className="homeRecipeImage" src={recipe.image} alt=''/> 
                                 <div id="likeAndFavorite">
                                     <div id="like">
-<<<<<<< HEAD
                                         <a href='/home'>
                                         <button onClick={like} className="recipeBtn">
                                         <img className="icon" src={likeBtn} alt='like' onClick={like}></img>
@@ -72,11 +77,6 @@ function Home(props) {
                                         <a href='/home'>
                                         <button onClick={favorite} className="recipeBtn">
                                         <img className="icon" src={star} alt='favStar' ></img>
-=======
-                                        <h4># Likes</h4>
-                                    </div>
-                                    <div id="favorite">
->>>>>>> 3c176973aefad5a361c407a3b4c059296402ed8d
                                         <h4>Add to Favorites</h4>
                                         </button></a>
                                         
