@@ -13,6 +13,16 @@ const OneRecipe = (props) => {
 
     const navigate = useNavigate();
 
+    const [user, setUser] = useState("");
+    useEffect(() => {
+        axios.get('http://localhost:8000/api/allUsers')
+            .then((res) => {
+                console.log(res);
+                console.log(res.data);
+                setUser(res.data);
+            })
+    }, [])
+
     useEffect(() => {
         axios.get(`http://localhost:8000/api/Recipes/${id}`)
         .then((res) => {
@@ -48,7 +58,7 @@ const OneRecipe = (props) => {
             <div id = "recipeTitleImageDescription">
                 <div>
                     <h1 id="oneRecipeName">{recipe.name}</h1>
-                    <h4 id="oneRecipeUsername">by {recipe.createdBy}</h4>
+                    <h4 id="oneRecipeUsername">by {recipe.createdBy?.username}</h4>
                     <p id="oneRecipeDescription">{recipe.description}</p>
                 </div>
             </div>

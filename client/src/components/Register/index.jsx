@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Register.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 function Register(props) {
@@ -9,6 +9,8 @@ function Register(props) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
+
+    const navigate = useNavigate();
 
     const submitHandler = (e) => {
         e.preventDefault();
@@ -20,6 +22,7 @@ function Register(props) {
             })
                 .then(res=>{
                     console.log(res.data);
+                    navigate('/login');
                 })
                 .catch((err)=>{
                     const errorResponse = err.response.data.errors;
@@ -45,6 +48,7 @@ function Register(props) {
                     onChange={(e) => setUsername(e.target.value)}
                     />
                 </label>
+
                 <label>
                     Email:
                     <input
@@ -54,6 +58,7 @@ function Register(props) {
                     onChange={(e) => setEmail(e.target.value)}
                     />
                 </label>
+
                 <label>
                     Password:
                     <input
@@ -63,6 +68,7 @@ function Register(props) {
                     onChange={(e) => setPassword(e.target.value)}
                     />
                 </label>
+
                 <label>
                     Confirm Password:
                     <input
@@ -72,6 +78,7 @@ function Register(props) {
                     onChange={(e) => setConfirmPassword(e.target.value)}
                     />
                 </label>
+                
                 <input type="submit" value="Sign Up" className='submitBtn' />
             </form>
             <Link to='/login'>Already have an account? Login here!</Link>
