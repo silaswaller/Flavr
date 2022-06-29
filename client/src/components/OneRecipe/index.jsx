@@ -69,7 +69,6 @@ const OneRecipe = (props) => {
             </div>
             <div id="editAndDeleteButtons">
                 <button className="button" onClick={() => editRecipe()}>Edit</button>
-
                 <button className="button" onClick={() => deleteRecipe(recipe._id)}>Delete</button>
                 </div>
         </div>
