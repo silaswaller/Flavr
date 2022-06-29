@@ -19,15 +19,15 @@
 }
 
 .headerLinkList li {
-    margin: 1vh 2vw;
-    font-size: 1.5em;
+    margin: 1vh 1.25vw;
+    font-size: 1.2em;
     list-style: none;
     transition-duration: 200ms;
 }
 .headerLinkList li:hover {
-    margin: 0vh 0vw;
-    padding: 0vh 2vw;
-    font-size: 1.6em;
+    margin: 1vh 1.25vw;
+    padding: 0vh 0vw;
+    font-size: 1.25em;
     list-style: none;
     transition-duration: 300ms;
 }

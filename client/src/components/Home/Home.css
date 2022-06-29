@@ -11,12 +11,11 @@
 }
 
 .homeRecipeImage {
-    width: 300px;
-    height: 200px;
+    width: 12em;
+    height: 9em;
     border: 2px solid white;
     justify-content: space-between;
     align-items: center;
-    display: inline-block;
 }
 
 #homeRecipe {
@@ -26,10 +25,15 @@
     color: white;
 }
 
-#container {
-    margin: 20px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+.container {
+    height: 100%;
+    width: 90vw;
+    margin-left: 5vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .homeRecipeText {
@@ -52,5 +56,17 @@ Link {
 }
 
 .icon {
-    margin-right: 5px;
+    height: 2vw;
+    width: 2vw;
+}
+
+.recipeLinkName{
+    color: white;
+    text-decoration: none;
+}
+
+.recipeBtn{
+    background-color: rgb(220, 77, 0);
+    border: none;
+    color: white;
 }

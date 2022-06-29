@@ -35,7 +35,7 @@ function Header() {
                 <li><a href='#'>Profile</a></li>
                 <li><a href='#'>Favorites</a></li>
                 <li><a href='/new'>Add</a></li>
-                <button className='btnHeader' onClick={logout}>Logout</button>
+                <li><a href='/' onClick={logout}>Logout</a></li>
             </ul>
         </div>
     );

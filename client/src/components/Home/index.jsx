@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import Header from '../Header';
 import './Home.css';
 import axios from 'axios';
+import star from './images/favoriteStar.png';
+import likeBtn from './images/likeImage.png';
+
 
 function Home(props) {
 
@@ -43,6 +46,8 @@ function Home(props) {
         
     }
 
+    
+
     return(
         <div className='homeContainer'>
             <Header />
@@ -50,23 +55,32 @@ function Home(props) {
             <div>
                 <h1 id="welcomeUsername">Welcome, {user.username}!</h1>
             </div>
-            <div id='container'>
+            <div className='container' id='container'>
                 
                 {
                     
                     recipeList.map((recipe, index) => (
                         <div>
                             <div id="homeRecipe" key={recipe._id}>
-                                <Link to={`/Recipe/${recipe._id}`} style={{ color: 'white' }}><h1 id="recipeName">{recipe.name}</h1></Link>
-                                <img className="homeRecipeImage" src={recipe.image} /> 
+                                <Link to={`/Recipe/${recipe._id}`} className='recipeLinkName'><h1 id="recipeName">{recipe.name}</h1></Link>
+                                <img className="homeRecipeImage" src={recipe.image} alt=''/> 
                                 <div id="likeAndFavorite">
                                     <div id="like">
-                                        <img className="icon" src="./images/likeImage.png" onClick={like}></img>
-                                        <h4># Likes</h4>
+                                        <a href='/home'>
+                                        <button onClick={like} className="recipeBtn">
+                                        <img className="icon" src={likeBtn} alt='like' onClick={like}></img>
+                                        <h4>Likes</h4>
+                                        </button>
+                                        </a>
                                     </div>
                                     <div id="favorite">
-                                        <img className="icon" src="./images/favroiteStar.png" onClick={favorite}></img>
+                                        <a href='/home'>
+                                        <button onClick={favorite} className="recipeBtn">
+                                        <img className="icon" src={star} alt='favStar' ></img>
                                         <h4>Add to Favorites</h4>
+                                        </button></a>
+                                        
+                                        
                                     </div>
                                 </div>
                             </div>
