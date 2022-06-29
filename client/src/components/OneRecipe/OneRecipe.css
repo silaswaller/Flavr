@@ -1,3 +1,52 @@
+
 .oneImg{
-    max-height: 80vh;
+    max-height: 40vh;
+    border-radius: 1vw;
+}
+
+.editContainer{
+    background-color: rgba(220, 77, 0);
+    width:80vw;
+    margin:5vh 0vw 0vh 10vw;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2vw;
+    color: white;
+
+}
+
+.btnContainer {
+    display: flex;
+    flex-direction: row;
+    width: 60vw;
+    margin-left:15vw;
+}
+
+.btn {
+    background-color: rgba(220, 77, 0);
+    justify-self: center;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .25em;
+    border: none;
+    text-decoration: none;
+    color: white;
+    box-shadow: 3px 3px 5px rgb(122, 122, 122);
+    transition-duration: 200ms;
+}
+
+.btn:hover {
+    background-color: rgba(220, 77, 0, 0.85);
+    justify-self: center;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .25em;
+    text-decoration: none;
+    color: white;
+    box-shadow: 3px 3px 5px rgb(122, 122, 122);
+    transition-duration: 300ms;
 }

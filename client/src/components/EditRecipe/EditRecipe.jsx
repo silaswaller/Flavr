@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Header from '../Header';
 import axios from 'axios';
 import { Link, useNavigate, useParams } from 'react-router-dom';
+import './EditRecipe.css'
 
 
 
@@ -57,38 +58,38 @@ const EditRecipe = (props) => {
 
     return (
 
-        <div>
+        <div className='pageContainer'>
             <Header />
 
             <form onSubmit={submitHandler}>
-
+                <div className='formContainer'>
                 <div>
-                    <label>Name</label>
+                    <label>Name: </label>
                     <input value={name} onChange={(e) => setName(e.target.value)} type='text' />
                 </div>
 
                 <div>
-                    <label>Image</label>
+                    <label>Image: </label>
                     <input value={image} onChange={(e) => setImage(e.target.value)} type='text' />
                 </div>
 
                 <div>
-                    <label>Cook Time</label>
+                    <label>Cook Time: </label>
                     <input value={cookTime} onChange={(e) => setCookTime(e.target.value)} type='text' />
                 </div>
 
                 <div>
-                    <label>Serves</label>
+                    <label>Serves: </label>
                     <input value={serves} onChange={(e) => setServes(e.target.value)} type='text' />
                 </div>
 
                 <div>
-                    <label>Description</label>
+                    <label>Description: </label>
                     <input value={description} onChange={(e) => setDescription(e.target.value)} type='text' />
                 </div>
 
                 <div>
-                    <label>Preparation</label>
+                    <label>Preparation: </label>
                     <input value={preparation} onChange={(e) => setPreparation(e.target.value)} type='text' />
                 </div>
 
@@ -96,9 +97,9 @@ const EditRecipe = (props) => {
                     <label>Ingredients</label>
                     <input value={ingredients} onChange={(e) => setIngredients(e.target.value)} type='text' />
                 </div> */}
+                </div>
 
-
-                <button>Update Recipe</button>
+                <button className='btn'>Update Recipe</button>
             </form>
 
         </div>

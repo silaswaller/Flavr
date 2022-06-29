@@ -1,0 +1,29 @@
+.pageContainer{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+.formContainer{
+    background-color:rgb(220,77,0);
+    color:white;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding:3vw;
+    height: 60vh;
+    width: 40vw;
+    margin-top: 5vh;
+    border-radius: 1vw;
+}
+
+.btn{
+width: 20vw;
+margin-left: 10vw;
+}
+
+.btn:hover{
+width: 20vw;
+margin-left: 10vw;
+}

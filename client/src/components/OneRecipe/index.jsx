@@ -44,16 +44,17 @@ const OneRecipe = (props) => {
     return(
         <div>
             <Header />
+            <div className="editContainer">
             <div id = "recipeTitleImageDescription">
                 <div>
                     <h1 id="oneRecipeName">{recipe.name}</h1>
                     <h4 id="oneRecipeUsername">by {recipe.createdBy}</h4>
                     <p id="oneRecipeDescription">{recipe.description}</p>
                 </div>
-                <div>
-                    <img id="oneRecipeImage" src={recipe.image} className="oneImg"/>
-                </div>
             </div>
+            <div>
+                    <img id="oneRecipeImage" src={recipe.image} className="oneImg" alt=''/>
+                </div>
             <br/>
             <h4 id="oneRecipeCookTimeAndServes">Cook Time: {recipe.cookTime}  |  Serves: {recipe.serves}</h4>
             <br/>
@@ -67,9 +68,11 @@ const OneRecipe = (props) => {
                     <p>{recipe.preparation}</p>
                 </div>
             </div>
-            <div id="editAndDeleteButtons">
-                <button className="button" onClick={() => editRecipe()}>Edit</button>
-                <button className="button" onClick={() => deleteRecipe(recipe._id)}>Delete</button>
+            </div>
+            <div id="editAndDeleteButtons" className="btnContainer">
+                <button className="btn" onClick={() => editRecipe()}>Edit</button>
+                <button className="btn" onClick={() => deleteRecipe(recipe._id)}>Delete</button>
+                
                 </div>
         </div>
     )
