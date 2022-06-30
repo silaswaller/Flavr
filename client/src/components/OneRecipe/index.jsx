@@ -9,7 +9,7 @@ const OneRecipe = (props) => {
     const {id} = useParams();
 
     const [recipe, setRecipe] = useState("");
-    const [ingredients, setIngredients] = useState([])
+    const [ingredients, setIngredients] = useState([]);
     const [recipeList, setRecipeList] = useState([]);
 
     const navigate = useNavigate();
@@ -71,6 +71,13 @@ const OneRecipe = (props) => {
             <div id="recipeIngredientsAndPreparation">
                 <div id="oneRecipeIngredients">
                     <ul>
+                    {
+                        ingredients.map((ingredient, index)=>{
+                                return(
+                                <li>Ingredient {index+1}: {ingredient.name} </li> 
+                                )
+                            })
+                    }
                     </ul>
                 </div>
                 <div id="oneRecipePreparation">
