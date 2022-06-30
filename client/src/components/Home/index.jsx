@@ -27,7 +27,9 @@ function Home(props) {
 
     useEffect(() => {
 
-        axios.get("http://localhost:8000/api/recipes")
+        axios.get("http://localhost:8000/api/recipes", {
+
+        })
         .then((res) => {
             console.log(res);
             console.log(res.data);
@@ -38,7 +40,7 @@ function Home(props) {
         })
     }, [])
 
-    const like = () => {
+    const like = (id) => {
 
     }
 
@@ -66,7 +68,7 @@ function Home(props) {
                                 <a href={`/Recipe/${recipe._id}`}><img className="homeRecipeImage" src={recipe.image} alt=''/></a>
                                 <div id="likeAndFavorite">
                                     <div id="like">
-                                        <button onClick={like} className="recipeBtn">
+                                        <button onClick={like(recipe._id)} className="recipeBtn">
                                         <img className="icon" src={likeBtn} alt='like' onClick={like}></img>
                                         <h4>Likes</h4>
                                         </button>

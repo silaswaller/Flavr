@@ -6,7 +6,7 @@ function LoginRegister() {
 
     return(
         <div className='loginRegisterContainer'>
-            <h1 className='logo'>Flavr</h1>
+            <h1 className='logo logoFont'>Flavr</h1>
             <h2 className='socialContainer'> A <span className='glow'> Delicious </span> Social Destination</h2>
             <div className='btnContainer'>
                 <Link to='/login' className='btn'>Login</Link>

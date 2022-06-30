@@ -33,7 +33,7 @@ function RecipeForm(props) {
                 setServes(res.data.serves);
                 setDescription(res.data.description);
                 setPreparation(res.data.preparation);
-                //setIngredients here somehow
+                setIngredients(res.data.ingredients);
             })
             .catch((err)=>{
                 console.log(err);
@@ -50,7 +50,8 @@ function RecipeForm(props) {
                 cookTime,
                 serves,
                 description,
-                preparation
+                preparation,
+                ingredients
             })
                 .then( res => {
                     console.log(res);
@@ -159,16 +160,14 @@ function RecipeForm(props) {
                         <label className='textAreaLabel'> {/*There's an error coming from both texteareas, not sure of a way around*/}
                             Description:
                             <textarea
-                            onChange={(e) => setDescription(e.target.value)}>
-                                {description}
-                            </textarea>
+                            value={description}
+                            onChange={(e) => setDescription(e.target.value)}></textarea>
                         </label>
                         <label className='textAreaLabel'>
                             Preparation:
                             <textarea
-                            onChange={(e) => setPreparation(e.target.value)}>
-                                {preparation}
-                            </textarea>
+                            value={preparation}
+                            onChange={(e) => setPreparation(e.target.value)}></textarea>
                         </label>
                         <input type="submit" value="Add Recipe" className='recipeFormSubmit' />
                     </div>

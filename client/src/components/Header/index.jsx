@@ -29,7 +29,7 @@ function Header() {
 
     return(
         <div className='headerContainer'>
-            <a href="/home" className='headerLogo'>Flavr</a>
+            <a href="/home" className='headerLogo logoFont'>Flavr</a>
             <ul className='headerLinkList'>
                 <li><a href='/home'>Home</a></li>
                 <li><a href='#'>Profile</a></li>

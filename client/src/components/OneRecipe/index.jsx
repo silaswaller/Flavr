@@ -11,12 +11,13 @@ const OneRecipe = (props) => {
     const [recipe, setRecipe] = useState("");
     const [ingredients, setIngredients] = useState([]);
     const [recipeList, setRecipeList] = useState([]);
+    // const [createdBy, setCreatedBy] = useState('');
 
     const navigate = useNavigate();
 
     const [user, setUser] = useState("");
     useEffect(() => {
-        axios.get('http://localhost:8000/api/allUsers')
+        axios.get('http://localhost:8000/api/loggedInUser', { withCredentials: true })
             .then((res) => {
                 console.log(res);
                 console.log(res.data);
@@ -27,8 +28,11 @@ const OneRecipe = (props) => {
     useEffect(() => {
         axios.get(`http://localhost:8000/api/Recipes/${id}`)
         .then((res) => {
-            console.log(res.data);
-            console.log(res.data.ingredients)
+            // console.log(res.data);
+            // console.log(res.data.ingredients)
+            setRecipe(res.data);
+            setIngredients(res.data.ingredients);
+            console.log(res.data.createdBy);
         })
         .catch((err) => {
             console.log(err)
@@ -47,7 +51,7 @@ const OneRecipe = (props) => {
     }
 
     const editRecipe = () => {
-        navigate(`/editRecipe/${recipe._id}`)
+        navigate(`/edit/${recipe._id}`)
     }
 
 
@@ -55,41 +59,34 @@ const OneRecipe = (props) => {
         <div>
             <Header />
             <div className="editContainer">
-            <div id = "recipeTitleImageDescription">
-                <div>
+                <div id="recipeTitleImageDescription">
                     <h1 id="oneRecipeName">{recipe.name}</h1>
+                    <img id="oneRecipeImage" src={recipe.image} className="oneImg" alt=''/>
                     <h4 id="oneRecipeUsername">by {recipe.createdBy?.username}</h4>
                     <p id="oneRecipeDescription">{recipe.description}</p>
                 </div>
-            </div>
-            <div>
-                    <img id="oneRecipeImage" src={recipe.image} className="oneImg" alt=''/>
-                </div>
-            <br/>
-            <h4 id="oneRecipeCookTimeAndServes">Cook Time: {recipe.cookTime}  |  Serves: {recipe.serves}</h4>
-            <br/>
-            <div id="recipeIngredientsAndPreparation">
-                <div id="oneRecipeIngredients">
-                    <ul>
-                    {
-                        ingredients.map((ingredient, index)=>{
-                                return(
-                                <li>Ingredient {index+1}: {ingredient.name} </li> 
-                                )
-                            })
-                    }
-                    </ul>
-                </div>
-                <div id="oneRecipePreparation">
-                    <p>{recipe.preparation}</p>
+                <h4 id="oneRecipeCookTimeAndServes">Cook Time: {recipe.cookTime}  |  Serves: {recipe.serves}</h4>
+                <div id="recipeIngredientsAndPreparation">
+                        <ul id="oneRecipeIngredients">
+                            {
+                                ingredients.map((ingredient, index)=>{
+                                        return(
+                                        <li>{ingredient.name}</li> 
+                                        )
+                                    })
+                            }
+                        </ul>
+                        <p  id="oneRecipePreparation">{recipe.preparation}</p>
                 </div>
             </div>
-            </div>
-            <div id="editAndDeleteButtons" className="btnContainer">
-                <button className="btn" onClick={() => editRecipe()}>Edit</button>
-                <button className="btn" onClick={() => deleteRecipe(recipe._id)}>Delete</button>
-                
-                </div>
+            {
+                user._id === recipe.createdBy?._id ? //CREDIT FOR THIS LINE: Bo for the "createdBy?", Ethan for the screenshare, Jena for saying "why is there a question mark there?"
+                    <div id="editAndDeleteButtons" className="btnContainer">
+                        <button className="btn" onClick={() => editRecipe()}>Edit</button>
+                        <button className="btn" onClick={() => deleteRecipe(recipe._id)}>Delete</button>
+                    </div>:
+                    ""
+            }
         </div>
     )
 }

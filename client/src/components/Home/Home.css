@@ -109,7 +109,6 @@ Link {
     .homeRecipeImage {
         width: 40vw;
         max-height: 40vh;
-        border: 2px solid white;
         border-radius: 1vw;
         justify-content: space-between;
         align-items: center;
@@ -125,13 +124,13 @@ Link {
 }
 
 
-@media screen and (max-width:450px){
+@media screen and (max-width:540px){
     #homeRecipe {
         padding: 2vw;
         background-color: rgb(220, 77, 0);
         color: white;
-        min-height: 80vh;
-        max-height: 90vh;
+        min-height: 70vh;
+        max-height: 80vh;
         margin-top: 5vh;
         margin-left: 1vw;
         margin-right: 1vw;
@@ -145,7 +144,6 @@ Link {
     .homeRecipeImage {
         width: 90vw;
         max-height: 60vh;
-        border: 2px solid white;
         border-radius: 1vw;
         justify-content: space-between;
         align-items: center;

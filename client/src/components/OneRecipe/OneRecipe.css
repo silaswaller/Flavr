@@ -1,3 +1,7 @@
+body {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
 
 .oneImg{
     max-height: 40vh;
@@ -7,12 +11,12 @@
 .editContainer{
     background-color: rgba(220, 77, 0);
     width:80vw;
-    margin:5vh 0vw 0vh 10vw;
+    margin:5vh 0vw 2vh 10vw;
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    border-radius: 2vw;
+    border-radius: .5em;
     color: white;
 
 }
@@ -51,8 +55,49 @@
     transition-duration: 300ms;
 }
 
+#recipeTitleImageDescription {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#oneRecipeDescription {
+    text-align: center;
+}
+
+#recipeIngredientsAndPreparation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#oneRecipeIngredients {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#oneRecipePreparation {
+    text-align: center;
+}
+
+#oneRecipeName, #oneRecipeImage, #oneRecipeUsername, #oneRecipeDescription, #oneRecipeCookTimeAndServes, #recipeIngredientsAndPreparation, #oneRecipeIngredients, #oneRecipePreparation {
+    margin-top: 2vh;
+}
+
+#oneRecipePreparation {
+    margin-bottom: 2vh;
+}
+
+#editAndDeleteButtons {
+    margin-bottom: 5vh;
+}
+
 @media screen and (max-width:540px){
- 
+
     .oneImg{
         max-width: 80vw;
         border-radius: 1vw;
@@ -61,15 +106,13 @@
     .editContainer{
         background-color: rgba(220, 77, 0);
         width:85vw;
-        margin:5vh 0vw 0vh 7.5vw;
+        margin:5vh 0vw 5vh 7.5vw;
         display: flex;
         flex-flow: column;
         justify-content: center;
         align-items: center;
         border-radius: 2vw;
         color: white;
-    
     }
-    
 }
 

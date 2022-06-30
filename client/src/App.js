@@ -21,7 +21,6 @@ function App() {
                     <Route path="/edit/:id" element={<RecipeForm view={'edit'} />} />
 
                     <Route path="/recipe/:id" element={<OneRecipe />} />
-                    <Route path="/editRecipe/:id" element={<EditRecipe /> } />
                 </Routes>
             </BrowserRouter>
         </div>
