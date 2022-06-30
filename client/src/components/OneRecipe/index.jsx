@@ -63,13 +63,6 @@ const OneRecipe = (props) => {
             <div id="recipeIngredientsAndPreparation">
                 <div id="oneRecipeIngredients">
                     <ul>
-                       {
-                             ingredients.map((ingredient, index)=>{
-                                 return(
-                                    <p>Ingredient {index+1}: {ingredient.name} </p> 
-                                 )
-                             })
-                       }
                     </ul>
                 </div>
                 <div id="oneRecipePreparation">
