@@ -101,6 +101,16 @@ module.exports = {
             })
     },
 
+    addFavoriteRecipe: (req,res) => {
+        User.findByIdAndUpdate({_id: req.jwtpayload.id},req.body,{new:true})
+            .then((favorite)=>{
+                res.json(favorite)
+            })
+            .catch((err)=>{
+                res.json({message: "Failed to enter into User.favorites", err})
+            })
+    }
+
 
 
 
