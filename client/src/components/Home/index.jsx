@@ -63,22 +63,19 @@ function Home(props) {
                         <div>
                             <div id="homeRecipe" key={recipe._id}>
                                 <Link to={`/Recipe/${recipe._id}`} className='recipeLinkName'><h1 id="recipeName">{recipe.name}</h1></Link>
-                                <img className="homeRecipeImage" src={recipe.image} alt=''/> 
+                                <a href={`/Recipe/${recipe._id}`}><img className="homeRecipeImage" src={recipe.image} alt=''/></a>
                                 <div id="likeAndFavorite">
                                     <div id="like">
-                                        <a href='/home'>
                                         <button onClick={like} className="recipeBtn">
                                         <img className="icon" src={likeBtn} alt='like' onClick={like}></img>
                                         <h4>Likes</h4>
                                         </button>
-                                        </a>
                                     </div>
                                     <div id="favorite">
-                                        <a href='/home'>
                                         <button onClick={favorite} className="recipeBtn">
                                         <img className="icon" src={star} alt='favStar' ></img>
                                         <h4>Add to Favorites</h4>
-                                        </button></a>
+                                        </button>
                                     </div>
                                 </div>
                             </div>

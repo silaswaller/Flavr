@@ -28,6 +28,7 @@ const OneRecipe = (props) => {
         .then((res) => {
             console.log(res);
             console.log(res.data);
+            console.log(res.data.ingredients);
             setRecipe(res.data)
         })
         .catch((err) => {
@@ -71,7 +72,9 @@ const OneRecipe = (props) => {
             <div id="recipeIngredientsAndPreparation">
                 <div id="oneRecipeIngredients">
                     <ul>
-                        <li></li>
+                        {/* {
+                            recipe.ingredients.name
+                        } */}
                     </ul>
                 </div>
                 <div id="oneRecipePreparation">

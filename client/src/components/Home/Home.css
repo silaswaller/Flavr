@@ -11,9 +11,9 @@
 }
 
 .homeRecipeImage {
-    width: 25vw;
-    height: 50vh;
-    border: 2px solid white;
+    width: 20vw;
+    margin-top: 1vh;
+    border-radius: .5em;
     justify-content: space-between;
     align-items: center;
     object-fit: cover;
@@ -24,8 +24,8 @@
     width: min-content;
     background-color: rgb(220, 77, 0);
     color: white;
-    min-height: 80vh;
-    max-height: 80vh;
+    min-height: 50vh;
+    max-height: 30vh;
     margin-top: 5vh;
     margin-left: 1vw;
     margin-right: 1vw;
@@ -33,7 +33,7 @@
     flex-flow: column;
     align-items: flex-start;
     justify-content: space-around;
-    border-radius: 1vw;
+    border-radius: .5em;
 }
 
 .container {
@@ -84,6 +84,7 @@ Link {
     border: none;
     color: white;
     margin: 1vw;
+    cursor: pointer;
 }
 
 

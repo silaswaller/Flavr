@@ -101,6 +101,10 @@
     transition-duration: 300ms;
 }
 
+.ingredient {
+    text-align: right;
+}
+
 @media screen and (max-width:300px) {
     .formColContainer{
         display: flex;
