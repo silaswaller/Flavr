@@ -9,6 +9,7 @@ const OneRecipe = (props) => {
     const {id} = useParams();
 
     const [recipe, setRecipe] = useState("");
+    const [ingredients, setIngredients] = useState([])
     const [recipeList, setRecipeList] = useState([]);
 
     const navigate = useNavigate();
@@ -26,10 +27,8 @@ const OneRecipe = (props) => {
     useEffect(() => {
         axios.get(`http://localhost:8000/api/Recipes/${id}`)
         .then((res) => {
-            console.log(res);
             console.log(res.data);
-            console.log(res.data.ingredients);
-            setRecipe(res.data)
+            console.log(res.data.ingredients)
         })
         .catch((err) => {
             console.log(err)
@@ -72,9 +71,6 @@ const OneRecipe = (props) => {
             <div id="recipeIngredientsAndPreparation">
                 <div id="oneRecipeIngredients">
                     <ul>
-                        {/* {
-                            recipe.ingredients.name
-                        } */}
                     </ul>
                 </div>
                 <div id="oneRecipePreparation">
