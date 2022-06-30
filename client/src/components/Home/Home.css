@@ -11,9 +11,9 @@
 }
 
 .homeRecipeImage {
-    width: 25vw;
-    height: 50vh;
-    border: 2px solid white;
+    width: 20vw;
+    margin-top: 1vh;
+    border-radius: .5em;
     justify-content: space-between;
     align-items: center;
     object-fit: cover;
@@ -24,8 +24,8 @@
     width: min-content;
     background-color: rgb(220, 77, 0);
     color: white;
-    min-height: 80vh;
-    max-height: 80vh;
+    min-height: 50vh;
+    max-height: 30vh;
     margin-top: 5vh;
     margin-left: 1vw;
     margin-right: 1vw;
@@ -33,7 +33,7 @@
     flex-flow: column;
     align-items: flex-start;
     justify-content: space-around;
-    border-radius: 1vw;
+    border-radius: .5em;
 }
 
 .container {
@@ -75,6 +75,7 @@ Link {
     text-decoration: none;
     display: block;
     max-height: 10vh;
+    text-overflow: hidden;
 
 }
 
@@ -83,4 +84,88 @@ Link {
     border: none;
     color: white;
     margin: 1vw;
+    cursor: pointer;
+}
+
+
+
+@media screen and (max-width:700px){
+    #homeRecipe {
+        padding: 2vw;
+        background-color: rgb(220, 77, 0);
+        color: white;
+        min-height: 80vh;
+        max-height: 80vh;
+        margin-top: 5vh;
+        margin-left: 1vw;
+        margin-right: 1vw;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: space-around;
+        border-radius: 1vw;
+    }
+
+    .homeRecipeImage {
+        width: 40vw;
+        max-height: 40vh;
+        border: 2px solid white;
+        border-radius: 1vw;
+        justify-content: space-between;
+        align-items: center;
+        object-fit: cover;
+    }
+
+    .icon {
+        height: 2vh;
+        width: 4vw;
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+}
+
+
+@media screen and (max-width:450px){
+    #homeRecipe {
+        padding: 2vw;
+        background-color: rgb(220, 77, 0);
+        color: white;
+        min-height: 80vh;
+        max-height: 90vh;
+        margin-top: 5vh;
+        margin-left: 1vw;
+        margin-right: 1vw;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: space-around;
+        border-radius: 1vw;
+    }
+
+    .homeRecipeImage {
+        width: 90vw;
+        max-height: 60vh;
+        border: 2px solid white;
+        border-radius: 1vw;
+        justify-content: space-between;
+        align-items: center;
+        object-fit: cover;
+    }
+
+    .icon {
+        height: 3vh;
+        width: 5vw;
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+    .container {
+        height: 100%;
+        width: 80vw;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10vw;
+    
+    }
 }

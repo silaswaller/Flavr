@@ -189,7 +189,7 @@ function RecipeForm(props) {
                         <div>
                             {
                                 ingredients.map((ingredient, index) => (
-                                    <p key={index}>{ingredient.name}</p>
+                                    <p key={index} className="ingredient">{ingredient.name}</p>
                                 ))
                             }
                         </div>

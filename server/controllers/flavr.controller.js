@@ -42,6 +42,7 @@ const User = require("../models/user.model");
 
         findOneRecipe: (req, res)=>{
             Recipe.findOne({ _id: req.params.id })
+                .populate("createdBy", "username email")
                 .then((oneRecipe)=>{
                     console.log(oneRecipe);
                     res.json(oneRecipe);

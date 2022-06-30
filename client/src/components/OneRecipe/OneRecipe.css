@@ -50,3 +50,26 @@
     box-shadow: 3px 3px 5px rgb(122, 122, 122);
     transition-duration: 300ms;
 }
+
+@media screen and (max-width:540px){
+ 
+    .oneImg{
+        max-width: 80vw;
+        border-radius: 1vw;
+    }
+    
+    .editContainer{
+        background-color: rgba(220, 77, 0);
+        width:85vw;
+        margin:5vh 0vw 0vh 7.5vw;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 2vw;
+        color: white;
+    
+    }
+    
+}
+

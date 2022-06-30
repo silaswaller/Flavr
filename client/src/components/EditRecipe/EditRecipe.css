@@ -27,3 +27,35 @@ margin-left: 10vw;
 width: 20vw;
 margin-left: 10vw;
 }
+
+@media screen and (max-width:540px){
+
+    .formContainer{
+    background-color:rgb(220,77,0);
+    color:white;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding:3vw;
+    height: 60vh;
+    width: 80vw;
+    margin-top: 5vh;
+    border-radius: 1vw;
+}
+}
+@media screen and (max-width:775px){
+    .formContainer{
+        background-color:rgb(220,77,0);
+        color:white;
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding:3vw;
+        height: 80vh;
+        width: 80vw;
+        margin-top: 5vh;
+        border-radius: 1vw;
+    }
+}
