@@ -6,6 +6,9 @@ const FlavrSchema = new mongoose.Schema({
 
     name: {
         type: String,
+        required: [
+            true, "Please input a name"
+        ],
     },
 
     image: {
@@ -14,18 +17,30 @@ const FlavrSchema = new mongoose.Schema({
 
     cookTime: {
         type: String,
+        required: [
+            true, "Please input the cookTime"
+        ]
     },
 
     serves: {
         type: String,
+        required: [
+            true, "Please input serves"
+        ],
     },
 
     description: { 
         type: String,
+        required: [
+            true, "Please input a descriptive description"
+        ],
     },
 
     preparation: {
         type: String,
+        required: [
+            true, "Please input a descriptive preperation"
+        ],
     },
 
     ingredients: [
