@@ -79,8 +79,6 @@ function Home(props) {
                                         <img className="icon" src={star} alt='favStar' ></img>
                                         <h4>Add to Favorites</h4>
                                         </button></a>
-                                        
-                                        
                                     </div>
                                 </div>
                             </div>
