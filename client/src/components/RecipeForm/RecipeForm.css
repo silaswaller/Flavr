@@ -105,6 +105,11 @@
     text-align: right;
 }
 
+.errorMsg {
+    color: red;
+    text-align: center;
+}
+
 @media screen and (max-width:300px) {
     .formColContainer{
         display: flex;

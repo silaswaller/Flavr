@@ -25,12 +25,8 @@ function Login(props) {
                     navigate('/home');
                 })
                 .catch((err)=>{
-                    const errorResponse = err.response.data.errors;
-                    const errorArr = [];
-                    for (const key of Object.keys(errorResponse)) {
-                        errorArr.push(errorResponse[key].message)
-                    }
-                    setErrors(errorArr);
+                    const errorResponse = err.response.data.message;
+                    setErrors(errorResponse); //Error messages fixed by Ethan
                 })
     }
 
@@ -38,7 +34,10 @@ function Login(props) {
         <div className='loginContainer'>
             <h1 className='loginH1'>Login</h1>
             <form className='loginForm' onSubmit={submitHandler}>
-                {errors.map((err, index) => <p key={index}>{err}</p>)}
+                {errors ?
+                    <p className='errorMsg'>{errors}</p>:
+                    ""
+                } {/* error message here fixed by Ethan */}
                 <label>
                     Email:
                     <input

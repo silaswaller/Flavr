@@ -121,7 +121,7 @@ function RecipeForm(props) {
             }
             <form className='recipeForm' onSubmit={submitHandler}>
                 <div className='recipeFormErrorBox'>
-                    {errors.map((err, index) => <p key={index}>{err}</p>)}
+                    {errors.map((err, index) => <p key={index} className='errorMsg'>{err}</p>)}
                 </div>
                 <div className='formColContainer'>
                     <div className='formCol'>
